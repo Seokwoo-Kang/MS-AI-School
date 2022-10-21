@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>클릭</button>
+    <table border="1"></table>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+       let people = [{'name':'park', 'age':20}, {'name':'kim', 'age':30}, {'name':'lee', 'age':40}];
+        let index = 0;
+        $('button').on('click', function(){
+            if(index < people.length){
+                $('table').append('<tr><td>'+people[index].name+'</td><td>'+people[index].age+'</td></tr>');
+                index++
+            } else {
+                alert('더이상 데이터가 없습니다.');
+            }
+        });
+        $(window).resize(function(){
+            if($(window).width() <= 500){
+                $('table').empty()
+                index = 0
+            }
+        })
+    </script>
+</body>
+</html>

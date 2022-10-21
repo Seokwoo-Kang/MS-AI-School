@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .testing {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        function isEvenByContents(item){
+            return parseInt($(item).html()) %2==0;
+        }
+
+        $('p').each(function(index, item){
+            if(isEvenByContents(item)){
+                $(item).addClass('testing')
+            }
+        })
+
+        
+            
+        
+     
+    </script>
+</body>
+</html>

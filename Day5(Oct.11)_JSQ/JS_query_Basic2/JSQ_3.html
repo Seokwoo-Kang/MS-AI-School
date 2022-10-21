@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>hello</p> -->
+    
+    <!-- 이벤트포커스 -->
+    <!-- <input type="text"> -->
+    
+    <!-- on과 자손을 이용한 이벤트처리, 데이터전달하기 -->
+    <!-- <div>
+        <h1>Title</h1>
+        <p>213121</p>
+        <p>213121</p>
+        <p>213121</p>
+        <p>213121</p>
+    </div> -->
+    
+    <!-- on과 mouseenter의 차이점
+    <ul>
+        <li>Static</li>
+        <li>Static</li>
+        <li>Static</li>
+        <li>Static</li>
+    </ul> -->
+    
+    <!-- 이벤트발생
+    <h1>hello</h1>
+    <ul>
+        <li>Static</li>
+        <li>Static</li>
+        <li>Static</li>
+        <li>Static</li>
+    </ul> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        // 이벤트 클릭
+        // $('p').click(function(event){
+        //     alert(event.type)
+        // })
+
+        // $(window).resize(function(event){
+        //     alert($(window).width());
+        // })
+
+        // 이벤트 포커스
+        // $('input').focus(function(event){
+        //     $(this).css('background-color','red');
+        // })
+
+        // $('p').on({
+        //     'mouseenter':function(event){
+        //         alert('mouse entered');
+        //     },
+        //     'click':function(event){
+        //         alert('clicked');
+        //     }
+        // })
+
+        // on과 자손을 이용한 이벤트처리
+        // $('div').on('click','h1',function(event){
+        //     alert($(this).text());
+        // })
+
+        // on과 데이터 전달하기
+        // $('div').on('click','h1',{msg:'hello'},function(event){
+        //     alert(event.data.msg);
+        // })
+        // $('p').on('click',{msg:'Whoo'},function(event){
+        //     alert(event.data.msg);
+        // })
+
+        // on과 mouseenter의 차이점
+        // 1.
+        // $('ul > li').mouseenter(function(event){
+        //     $(this).css('background-color','red');
+        // })
+
+        // 2.
+        // $('ul').on('mouseenter','li',function(event){
+        //     $(this).css('background-color','red');
+        // })
+
+        // $('ul').click(function(event){
+        //     $(this).append('<li>Dynamic</li>');
+        // })
+
+        // 이벤트발생
+        // $('h1').mouseenter(function(event){
+        //     $('ul').trigger('click');
+        // })
+        // $('ul').click(function(event){
+        //     $(this).append('<li>Dynamic</li>');
+        // })
+
+        
+    </script> 
+
+    
+    
+    
+</body>
+</html>

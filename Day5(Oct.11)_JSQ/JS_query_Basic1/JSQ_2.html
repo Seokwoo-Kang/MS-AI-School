@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class = "parent">parent
+        <p>1</p>
+        <p class="super">super</p>
+        <p>2</p>
+        <p class="super">super</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        // $('p').css('background-color','red')
+        //     .filter('.super')
+        //     .css('border','10px solid black')
+
+        $('p').css('background-color','red')
+            .filter(function(index){
+                return index%2==0
+            })
+            .css('border','10px solid black')
+        
+    
+    </script>
+    
+    
+</body>
+</html>

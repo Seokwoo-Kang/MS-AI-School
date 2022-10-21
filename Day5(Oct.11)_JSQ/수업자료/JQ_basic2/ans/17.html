@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="number">
+  <input type="number">
+  <button id="plus">+</button>
+  <button id="minuse">-</button>
+  <button id="multiply">x</button>
+  <button id="divide">/</button>
+  <div>0</div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+    function isEmpty(val1, val2) {
+      if (val1 === "" || val2 === "") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    $('#plus').click(function () {
+      let num1 = $('input').eq(0).val();
+      let num2 = $('input').eq(1).val();
+      if (isEmpty(num1, num2)) {
+        alert("값을 입력해주세요");
+      } else {
+        let result = parseInt(num1) + parseInt(num2);
+        $('div').text(result);
+      }
+    });
+    $('#minuse').click(function () {
+      let num1 = $('input').eq(0).val();
+      let num2 = $('input').eq(1).val();
+      if (isEmpty(num1, num2)) {
+        alert("값을 입력해주세요");
+      } else {
+        let result = parseInt(num1) - parseInt(num2);
+        $('div').text(result);
+      }
+    });
+    $('#multiply').click(function () {
+      let num1 = $('input').eq(0).val();
+      let num2 = $('input').eq(1).val();
+      if (isEmpty(num1, num2)) {
+        alert("값을 입력해주세요");
+      } else {
+        let result = parseInt(num1) * parseInt(num2);
+        $('div').text(result);
+      }
+    });
+    $('#divide').click(function () {
+      let num1 = $('input').eq(0).val();
+      let num2 = $('input').eq(1).val();
+      if (isEmpty(num1, num2)) {
+        alert("값을 입력해주세요");
+      } else {
+        let result = parseInt(num1) / parseInt(num2);
+        $('div').text(result);
+      }
+    });
+
+  </script>
+</body>
+
+</html>

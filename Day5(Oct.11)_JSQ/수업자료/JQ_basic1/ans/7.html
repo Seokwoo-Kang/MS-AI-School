@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>10</h1>
+    <div class="parent"></div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        let h1Num = parseInt($('h1').html())
+        let parent = $('.parent')
+        for(let i=0; i<h1Num; i++){
+            parent.append('<p>hello world</p>')
+        }
+    </script>
+</body>
+</html>

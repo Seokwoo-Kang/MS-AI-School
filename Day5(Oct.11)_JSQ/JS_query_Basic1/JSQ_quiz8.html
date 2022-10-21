@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>6</h1>
+    <div class="parent"></div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        function isEven(value){
+            return value % 2 == 0
+        }
+
+        function writeEven(num, elem){
+            if(isEven(num)==0){
+                elem.html('짝수')
+            }else{
+                elem.html('홀수')
+            }
+        }
+
+        function init(){
+            let h1Num = parseInt($('h1').html)
+            let div = $('.parent')
+            writeEven(h1Num, div)
+        }
+
+        init()
+     
+    </script>
+</body>
+</html>
