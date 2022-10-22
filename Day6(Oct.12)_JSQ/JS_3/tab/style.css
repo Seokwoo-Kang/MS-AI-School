@@ -1,0 +1,33 @@
+.tab-menu {
+    list-style: none;
+    height: 80px;
+    overflow: hidden;
+}
+.tab-menu li {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    display: inline-block;
+    line-height: 35px;
+}
+.hover {
+    background-color: pink;
+}
+.select {
+    background-color: lightseagreen;
+    color: white;
+}
+.tab-contents {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 700px;
+
+}
+.tab-contents .content {
+    border: 1px solid lightcoral;
+    padding: 5px 20px;
+    display: none;
+}
