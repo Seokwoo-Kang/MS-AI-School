@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>css float exam1</title>
+	<style type="text/css">
+	*{
+		padding:0; margin:0;
+	}
+
+	body{
+		width: 960px;
+		font-size: 14px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		font-size: 41px;
+	}
+
+	header {
+		width: 960px;
+		background-color: blue;
+	}
+    section{
+        overflow: hidden;
+        background-color: green;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        background-color: green;
+        float :left ;
+        width: 180px;
+        padding: 10px;     
+     
+    }
+
+    article{
+        background-color: pink;
+        float: left;
+        width: 740px;
+        padding: 10px;        
+        
+
+    }
+
+    footer{
+        background-color: blue;
+        text-align: center;
+        clear: both;
+    }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Prime Wordpress</h1>
+	</header>
+        <section>
+            <nav>
+                <h4>네비게이션</h4>
+                <ul>
+                    <li>Prime wordpress 소개</li>
+                    <li>Prime wordpress 멤버</li>
+                    <li>Prime wordpress 커리큘럼</li>
+                </ul>
+
+            </nav>
+            <article>
+                <h2>Prime Wordpress 소개</h2>
+                <p>Prime wordpress는 오픈소스인 wordpress의 취지를 살려 강의를 진행합니다</p>
+                <p>Prime wordpress는 오픈소스인 wordpress의 취지를 살려 강의를 진행합니다</p>
+                <p>Prime wordpress는 오픈소스인 wordpress의 취지를 살려 강의를 진행합니다</p>
+                <p>Prime wordpress는 오픈소스인 wordpress의 취지를 살려 강의를 진행합니다</p>
+                <p>Prime wordpress는 오픈소스인 wordpress의 취지를 살려 강의를 진행합니다</p>			
+            </article>		
+        </section>
+	<footer>
+		<p>Copyright@primewordpress</p>
+	</footer>
+</body>
+</html>
