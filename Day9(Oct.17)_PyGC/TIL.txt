@@ -1,5 +1,0 @@
-TIL
-
-Computervision - image, object detect, JSON
-FaceAPI - face detect
-Customvision - object classify
