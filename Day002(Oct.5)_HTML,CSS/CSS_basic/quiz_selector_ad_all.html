@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>css selector ad all</title>
+	<style type="text/css">
+	div {
+		background-color: blue;
+	}
+
+	div h1 {
+		font-size: 42px;
+        color: white;
+		
+	}
+    .second {
+		background-color: red;
+	}
+
+	#only {
+        background-color: yellow;
+    }
+
+    .A {
+        color: blue;
+        background-color: black;
+    }
+
+	</style>
+</head>
+<body>
+	<div>
+		<h1>First Title</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus sodales libero vitae nunc efficitur malesuada. 
+		Mauris lacinia ex nunc, ut facilisis nulla rhoncus a. 
+		Proin consectetur condimentum posuere. Maecenas pellentesque varius erat quis molestie.</p>
+	</div>
+
+	<div class="second">
+		<h1>Second Title</h1>
+		<p id="only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus sodales libero vitae nunc efficitur malesuada. 
+		Mauris lacinia ex nunc, ut facilisis nulla rhoncus a. 
+		Proin consectetur condimentum posuere. <span class="A">Maecenas</span> pellentesque varius erat quis molestie.</p>
+	</div>
+
+</body>
+</html>
