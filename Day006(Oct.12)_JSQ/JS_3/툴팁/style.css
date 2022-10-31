@@ -1,0 +1,24 @@
+ul{
+    list-style:none;
+}
+li{
+    font-size: 30px;
+    display:inline-block;
+    background-color: lightseagreen;
+    margin:20px;
+    padding: 20px;
+}
+.balloon{
+    background-color: bisque;
+    color: #333;
+    padding: 10px;
+    position: absolute;
+    display:none;
+    z-index:100;
+    visibility: hidden;
+}
+
+.hover {
+    background-color: pink;
+    visibility: visible;
+}
