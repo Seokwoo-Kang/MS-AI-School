@@ -1,0 +1,127 @@
+데이터 전처리(Data preprocessing)
+-데이터 마이닝 과정의 중요한 단계
+-신뢰성과 원하는 결과를 향상시키기 위해 데이터를 가공 
+-데이터 라벨링, 데이터 전처리 과정이 총비용의 80~90프로
+ex)암환자 인공지능: 정상인사진 vs 암환자사진
+
+데이터 라벨링 : 이미지나 데이터자체에 적절한 분석 기준에 따라 분류
+전처리
+-결측치:중요데이터누락
+-데이터오류:잘못된데이터가 입력되어있다
+-이상치:값의 범위가 일반적인 범위에서 벗어나있다
+-데이터형식:데이터 형식이 분석하기 적합하지않다
+-범주형 데이터(Categorical Data):범주형으로 표현되어야 하는 
+			     데이터가 다른형태로 되어있다
+		                 ex) 사망 0, 생존 1일 경우 0.7의 데이터를 사진 사람
+
+Scaling
+ 변수크기를 일정하게
+ 대표함수 : Min-Max 스케일링
+ 	   z-정규화
+
+mMscaler : 0~1사이에서 데이터 분포
+standardscaler : 평균을 0으로 잡고 -1~1사이에 데이터분포 (표준정규분포)
+
+
+Sampling
+클래스불균형 문제를 해결하기 위함
+클래스라벨의 비율이 불균형인 데이터로 학습하기 어려움
+oversampling 적은 클래스의 수를 증가시킴
+undersampling 많은 클래스의 수를 감소시킴
+ex) 개 10000 vs 고양이 5000   개의 5000을 줄이거나(under) 고양이에 5000을 늘림(over)
+random over/under sampling 은 
+	기존데이터 성질과 특징에 따라 샘플링처리 후 데이터가 편향, 편중되는 문제가 발생할수있음
+	
+SMOTE(Synthetic Minority Oversampling Technique)
+튄값 보정
+데이터 손실이 없고 과적합을 억제하는 장점
+
+Dimensionality Reduction
+1. 차원의 고도화로 데이터 분석에 대한 어려움이 생김
+2. 불필요한 변수제거로 차원축소를 통해 해석과 분석에 용이하도록
+3. 주성분 분석을 통해 차원축소의 기준이되는 변수1와 영향이 적은 변수2를 구분하여 변수2 제거
+
+
+<자연어처리>
+Categorical Variable to Numeric Variable
+
+수치화 방법
+- Label Encoding * 일반적으로 쉽게
+- One-hot Encoding ** 문장구별시
+
+Label Encoding
+n개의 범주형 데이터를 연속적인 수치데이터로 표현
+간단한방법이지만 문제를 일으킬수 있음
+
+
+<Azure>
+bit1010@live.com
+
+클라우드 - 탄력성
+	클라우드 컴퓨팅 - 퍼블릭, 프라이빗, 하이브리드
+	클라우드 서비스 - IaaS,PaaS,SaaS
+데이터센터
+	비상시 서버에 전력을 공급해주는 UPS
+	데이터센터는 각회사에서 직접 운영 또는 IDC(International Data Corporation) 업체에 서버를 맡김
+가상화(Virtualization)
+가상머신
+	윈도우 위에 하이퍼v가 동작하고 그위에 가상머신이 동작하는 것이고
+	AWS의 EC2라는 서비스는 Xen이라는 오픈소스 하이퍼바이저를 기반으로 동작
+
+
+
+가용성집합
+사용비용 없음
+장애 도메인 - 한서버에 쏠리지않게 여러서버에 분산이 가능하게
+업데이트 도메인 - ????
+
+가용성 영역
+azure 지역내 물리적으로 구분가능한 위치
+가용성 집합의 상위개념
+하나이상의 데이터 센터를 포함
+하나의 독립적인 격리 경계의 역할
+
+
+<애져 실습>
+애져 어딘가에 클라우드 쉘이 생성되어
+리눅스의 대표적인 배쉬쉘
+
+서비스 한개가 리소스가 됨
+
+Hyper-V 복습!!!!!
+인바운드 포트 개념공부!
+
+<가상머신>
+구글- 3tier Architecture(3계층) 구성~~ 검색
+
+1. 윈도우즈 가상서버 생성
+https://learn.microsoft.com/ko-kr/azure/virtual-machines/windows/quick-create-portal
+RDP -
+ksukwoo91//!@~~~~
+로컬서버를 웹서버로 IIS windowServer
+
+2. 리눅스 가상서버 생성
+https://learn.microsoft.com/ko-kr/azure/virtual-machines/linux/quick-create-portal
+웹서버nginx - 여러 플랫폼 지원가능
+
+
+수직적 스케일 업/다운
+물리적인 서버라면 물리적인 장치가 포함되어 복잡해지지만
+가상 서버에선 장치들을 서버 사용 목적에 따라 스케일 업/다운을 통해 적합하게 수정
+
+수평적 스케일 인/아웃
+서버의 대수를 조정(시간적인 측면의 관리)
+유동성과 효율성을 최우선시
+
+3. VM Scale Set(VMSS: 가상머신 확장 집합만들기)
+링크를 통해 실습
+미리 해보고 리소스가 뭐가다른지 파악해보기
+
+VMSS 생성 링크
+https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/quick-create-portal
+VMSS 구성 링크
+https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-portal
+
+
+유툽
+https://www.youtube.com/watch?v=Pwf-YG--Zsg&feature=youtu.be&ab_channel=%EC%98%A4%ED%94%88%EB%84%B7Opennet.or.kr
