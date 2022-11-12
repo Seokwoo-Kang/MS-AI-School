@@ -1,1 +1,25 @@
+#
 # MS-AI-School
+
+- [Day001(Oct.4, 2022)_Mind Set](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day001(Oct.%204%2C%202022)_Mind%20Set "Day001")
+- [Day002(Oct.5, 2022)_HTML//CSS](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day002(Oct.5)_HTML%2CCSS "Day002")
+- [Day003(Oct.6, 2022)_CSS](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day003(Oct.6)_CSS/CSS "Day003")
+- [Day004(Oct.7, 2022)_Javascript](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day004(Oct.7)_JS "Day004")
+- [Day005(Oct.8, 2022)_JavascriptQuery](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day005(Oct.11)_JSQ "Day005")
+- [Day006(Oct.9, 2022)_JavascriptQuery](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day006(Oct.12)_JSQ/JS_3 "Day006")
+- [Day007(Oct.10, 2022)_Python](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day007(Oct.13)_PyJ/Jupyter "Day007")
+- [Day008(Oct.11, 2022)_Python//Cloud](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day008(Oct.14)_Py "Day008")
+- [Day009(Oct.12, 2022)_Python//ComputerVision](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day009(Oct.17)_PyGC "Day009")
+- [Day010(Oct.13, 2022)_Python//ComputerVision](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day010(Oct.18)_PyGC  "Day010")
+- [Day011(Oct.14, 2022)_Python//MachineLearning](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day011(Oct.19)_PyGC "Day011")
+- [Day012(Oct.15, 2022)_Python//SQLdatabase](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day012(Oct.20)_PyGC "Day012")
+- [Day013(Oct.16, 2022)_AI Basic](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day013(Oct.21)_PyGC "Day013")
+- [Day014(Oct.17, 2022)_Career Metoring](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day014(Oct.24)_CareerMentoring "Day014")
+- [Day015(Oct.18, 2022)_Open-Hall Meeting](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day015(Oct.25)_Numpy%26OpenHallMeeting "Day015")
+- [Day016(Oct.19, 2022)_AI Basic2](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day016(Oct.26)_AI_Basic(Orange) "Day016")
+- [Day017(Oct.20, 2022)_DeepLearning](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day017(Oct.27%2C%202022)_AI_Basic2 "Day017")
+- [Day018(Oct.21, 2022)_DeepLearning](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day018(Oct.28)_ClassicMachineLearning "Day018")
+- [Day019(Oct.22, 2022)_DeepLearning](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day019(Oct.31)_DeepLearning "Day019")
+- [Day020(Oct.23, 2022)_DeepLearning](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day020(Nov.1)_DeepLearning(examples) "Day020")
+- [Day021(Oct.24, 2022)_Azure](https://github.com/Seokwoo-Kang/MS-AI-School/tree/main/Day021(Nov.2%2C%202022)_DeepLearning "Day021")
+    
