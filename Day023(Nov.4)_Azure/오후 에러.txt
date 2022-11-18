@@ -1,0 +1,179 @@
+from sklearn.linear_model import Ridge
+
+from sklearn.metrics import mean_squared_error
+
+from sklearn.externals import joblib
+
+import math
+
+
+
+alphas = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+
+
+for alpha in alphas:
+
+    run = experiment.start_logging()
+
+    run.log('alpha_value', alpha)
+
+
+
+    model = Ridge(alpha=alpha)
+
+    model.fit(X_train,y_train)
+
+
+
+    y_pred = model.predict(X_test)
+
+    rmse = math.sqrt(mean_squared_error(y_test,y_pred))
+
+    run.log('rmse',rmse)
+
+
+
+    model_name = 'model_alpha_' + str(alpha) + '.pkl'
+
+    filename = 'outputs/' + model_name
+
+
+
+    joblib.dump(value=model,filename=filename)
+
+    run.upload_file(name=model_name, path_or_stream=filename)
+
+    run.complete()
+
+
+
+    print(f'{alpha} experiment completed')
+
+
+
+
+
+
+
+
+
+
+
+================================
+
+
+# Best model 탐색 후 다운로드 (10번중에 베스트 모델 찾기)
+
+
+minium_rmse_runid = None
+
+minium_rmse = None
+
+
+
+for run in experiment.get_runs():
+
+    run_metrics = run.get_metrics()
+
+    run_details = run.get_details()
+
+
+
+    run_rmse = run_metrics['rmse']
+
+    run_id = run_details['runId']
+
+
+
+    if minium_rmse is None:
+
+        minium_rmse = run_rmse
+
+        minium_rmse_runid = run_id
+
+    else:
+
+        if run_rmse < minium_rmse:
+
+            minium_rmse = run_rmse
+
+            minium_rmse_runid = run_id
+
+
+
+print('Best run_id:' + minium_rmse_runid)
+
+print('Best rmse:' + str(minium_rmse))
+
+
+======================
+
+
+from azureml.core import Run
+best_run = Run(experiment=experiment, run_id = minium_rmse_runid)
+
+best_run.download_file(name=str(best_run.get_file_names()[0]))
+
+
+========================
+
+# CSV파일로 저장
+import numpy as np
+
+from azureml.core import Dataset
+
+
+
+np.savetxt('features.csv', X_train, delimiter=',')
+
+np.savetxt('labels.csv', y_train, delimiter=',')
+
+
+
+datastore = ws.get_default_datastore()
+
+datastore.upload_files(files=['./features.csv', './labels.csv'],
+
+                       target_path='diabetes-experiment/',
+
+                       overwrite=True)
+
+
+
+input_dataset = Dataset.Tabular.from_delimited_files(path=[(datastore, 'diabetes-experiment/features.csv')])
+
+output_dataset = Dataset.Tabular.from_delimited_files(path=[(datastore, 'diabetes-experiment/labels.csv')])
+
+
+==================================
+# 보내주신 코드
+
+import sklearn
+
+
+
+from azureml.core import Model
+from azureml.core.resource_configuration import ResourceConfiguration
+
+
+
+
+model = Model.register(workspace=ws,
+                       model_name='diabetes-experiment-model',
+                       model_path=f"./{str(best_run.get_file_names()[0])}",
+                       model_framework=Model.Framework.SCIKITLEARN,  
+                       model_framework_version=sklearn.__version__,  
+                       sample_input_dataset=input_dataset,
+                       sample_output_dataset=output_dataset,
+                       resource_configuration=ResourceConfiguration(cpu=1, memory_in_gb=0.5),
+                       description='Ridge regression model to predict diabetes progression.',
+                       tags={'area': 'diabetes', 'type': 'regression'})
+
+
+
+print('Name:', model.name)
+print('Version:', model.version)
+
+
+
