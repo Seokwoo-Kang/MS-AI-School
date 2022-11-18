@@ -1,0 +1,177 @@
+ 1  sudo apt-get update
+    2  sudo apt-get upgrade
+    3  sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+    4  curl -fsSL https://download.docker.com/linux/ubuntu/gpg
+    5  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyings/docker-archive-keying.gpg
+    6  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    7  sudo apt-get update
+    8  sudo apt-get install docker-ce dokcer-ce-cli containerd.io
+    9  sudo apt-get update
+   10  sudo apt-get upgrade
+   11  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg     lsb-release
+   12  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   13  echo   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+   14    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   15  sudo apt-get update
+   16  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   17  sudo docker run hello-world
+   18  sudo docker run hello-world
+   19  ps
+   20  ps -al
+   21  docker ps
+   22  sudo docker ps
+   23  sudo usermod -a -G docker $User
+   24  sudo usermod -a -G docker $USER
+   25  sudo service docker restart
+   26  docker ps
+   27  exit
+   28  docker ps
+   29  docker pull --help
+   30  docker pull ubuntu:18.04
+   31  docker images
+   32  docker ps
+   33  docker ps -a
+   34  docker run --help
+   35  docker run -it --name demo1 ubuntu:18.04 /bin/bash
+   36  docker run -it --name demo2 ubuntu:18.04 /bin/bash
+   37  docker ps
+   38  docker run -it -d --name demo2 ubuntu:18.04 /bin/bash
+   39  docker run -it -d --name demo3 ubuntu:18.04
+   40  docker ps
+   41  docker exec -it demo3 /bin/bash
+   42  docker ps
+   43  docker logs
+   44  docker logs --help
+   45  docker run --name demo4 -d busybox sh -c "while true;do $(echo date);sleep 1; done"
+   46  docker ps
+   47  docker logs demo4
+   48  docker logs demo4 -f
+   49  docker ps
+   50  docker stop demo4
+   51  docker stop demo3
+   52  docker stop demo2
+   53  docker stop demo1
+   54  docker ps -a
+   55  docker rm demo4
+   56  docker ps -a
+   57  docker rm demo3
+   58  docker rm demo2
+   59  docker rm demo1
+   60  docker ps -a
+   61  docker images
+   62  docker rmi ubuntu
+   63  docker rmi ubuntu:18.04
+   64  docker images
+   65  clear
+   66  ls -al
+   67  ls
+   68  vi hello.txt
+   69  ls
+   70  vi hello.txt
+   71  ls
+   72  cat hello.txt
+   73  touch world.txt
+   74  ls
+   75  cat world.txt
+   76  rm hello.txt
+   77  rm world.txt
+   78  cd $HOME
+   79  mkdir docker-practice
+   80  cd docker-practice
+   81  touch Dockerfile
+   82  ls
+   83  vi Dockerfile
+   84  cat Dockerfile
+   85  docker build --help
+   86  docker build -t my-image:v1.0.0
+   87  docker build -t my-image:v1.0.0 .
+   88  ls
+   89  docker images
+   90  docker images | grap my-image
+   91  docker images | grep my-image
+   92  ls -al | grep Dockerfile
+   93  docker images
+   94  clear
+   95  docker run -d -p 5000:5000 --name registry registry
+   96  docker ps
+   97  docker tag my-image:v1.0.0 localhost:5000/my-image:v1.0.0
+   98  docker images
+   99  docker push localhost:5000/my-image:v1.0.0
+  100  clear
+  101  curl -X GET http://locadlhost:5000/v2/_catalog
+  102  curl -X GET http://localhost:5000/v2/_catalog
+  103  curl -X GET http://localhost:5000/v2/my-image/tags/list
+  104  cat Dockerfile
+  105  cd
+  106  docker login
+  107  docker tag my-image:v1.0.0 catdogkang/my-image:v1.0.0
+  108  docker push catdogkang/my-image:v1.0.0
+  109  docker pull catdogkang/my-image:v1.0.0
+  110  curl -L0 https://storage.googleapis.com/minikube/release/v1.22.0/minikube-linux-amd64
+  111  curl -LO https://storage.googleapis.com/minikube/releases/v1.22.0/minikube-linux-amd64
+  112  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  113  minikube --help
+  114  minikube version
+  115  curl -LO https://dl.k8s.io/release/v1.22.1/bin/linux/kubectl
+  116  sudo install -o root -m 0755 kubectl /usr/local/bin/kubectl
+  117  kubectl --help
+  118  sudo install -o root -m 0755 kubectl /usr/local/bin/kubectl
+  119  kubectl --help
+  120  curl -LO https://dl.k8s.io/release/v1.22.1/bin/linux/amd64/kubectl
+  121  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+  122  kubectl --help
+  123  kubectl version
+  124  minikube start --driver=docker
+  125  minikube status
+  126  kubectl get pod
+  127  kubectl get pod -n kube-system
+  128  minikube delete
+  129  minikube start --driver=docker
+  130  minikube status
+  131  vi pod.yaml
+  132  kubectl apply -f pod.yaml
+  133  cat pod.yaml
+  134  kubectl get pod
+  135  kubectl get pod -A
+  136  kubectl describe pod counter
+  137  kubectl get pod -o wide
+  138  kubectl get pod -w
+  139  clear
+  140  kubectl logs counter
+  141  kubectl logs counter -f
+  142  kubectl exec -it counter /bin/bash
+  143  kubectl exec -it counter sh
+  144  kubectl delete pod counter
+  145  vi Deployment.yaml
+  146  cat Deployment.yaml
+  147  kubectl apply -f Deployment.yaml
+  148  kubectl get deployment
+  149  kubectl apply -f Deployment.yaml
+  150  vi Deployment.yaml
+  151  kubectl apply -f Deployment.yaml
+  152  vi Deployment.yaml
+  153  cat Deployment.yaml
+  154  kubectl apply -f Deployment.yaml
+  155  vi Deployment.yaml
+  156  kubectl apply -f Deployment.yaml
+  157  kubectl get pod
+  158  kubectl delete pod nginx-deployment-66b6c48dd5-jb6kk
+  159  kubectl get pod
+  160  kubectl scale deployment/nginx-deployment --replicas=5
+  161  kubectl get pod
+  162  kubectl scale deployment/nginx-deployment --replicas=20
+  163  kubectl get pod
+  164  kubectl scale deployment/nginx-deployment --replicas=1
+  165  kubectl get pod
+  166  kubectl delete deployment nginx-deployment
+  167  kubectl apply -f Deployment.yaml
+  168  kubectl get pod -o wide
+  169  curl -X GET 172.17.0.4 -vvv
+  170  ping yahoo.com
+  171  vi Service.yaml
+  172  kubectl apply -f Service.yaml
+  173  kubectl get service
+  174  curl -X 10.97.186.43:80
+  175  curl -X GET 10.97.186.43:80
+  176  curl -X GET 10.97.186.43:80 -vvv
+  177  history
