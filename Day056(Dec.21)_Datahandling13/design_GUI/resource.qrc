@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="ann">
+    <file>save.jpeg</file>
+    <file>paint.png</file>
+  </qresource>
+</RCC>
