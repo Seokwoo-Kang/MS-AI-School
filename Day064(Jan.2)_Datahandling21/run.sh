@@ -1,0 +1,5 @@
+python main.py --path './dataset/train' --mode 'train'
+python main.py --path './dataset/train' --mode 'train'
+python main.py --path './dataset/train' --mode 'train'
+python main.py --path './dataset/train' --mode 'train'
+python main.py --path './dataset/train' --mode 'train'
