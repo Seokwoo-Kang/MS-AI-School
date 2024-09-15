@@ -1,0 +1,14 @@
+.header-content{
+    background: lightseagreen;
+}
+ul{
+    background-color: black;
+    color:white;
+    overflow: hidden;
+    list-style: none;
+}
+ul li{
+    float: left;
+    margin:10px;
+}
+
